@@ -1,0 +1,19 @@
+.author__photo {
+    width: 272px;
+    margin: 0;
+    padding: 32px 8px 0 8px;
+}
+
+@media (min-width: 768px) {
+    .author__photo {
+        width: 232px;
+        padding: 21px 0 21px 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .author__photo {
+        width: 464px;
+        padding: 0;
+    }
+}

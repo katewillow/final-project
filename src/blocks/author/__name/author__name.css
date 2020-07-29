@@ -1,0 +1,15 @@
+.author__name {
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 16px 0;
+}
+
+@media (min-width: 1280px) {
+    .author__name {
+        margin-bottom: 24px;
+        font-size: 40px;
+        line-height: 1.1;
+    }
+}

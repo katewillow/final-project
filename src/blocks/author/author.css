@@ -1,0 +1,27 @@
+@import "__photo/author__photo.css";
+@import "__description/author__description.css";
+@import "__name/author__name.css";
+@import "__experience/author__experience.css";
+
+.author {
+    padding: 0 16px 32px 16px;
+    color: #1A1B22;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+    .author {
+        padding: 40px 40px 48px 40px;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1280px) {
+    .author {
+        padding: 80px 104px;
+    }
+}

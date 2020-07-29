@@ -1,0 +1,12 @@
+@import "_fb/footer__social-icon_fb.css";
+@import "_github/footer__social-icon_github.css";
+
+.footer__social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer__social-icon:hover {
+    opacity: 0.3;
+    transition: 0.3s ease-in;
+}

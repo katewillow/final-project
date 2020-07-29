@@ -1,0 +1,14 @@
+.no-result__subtitle {
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #B6BCBF;
+}
+
+@media (min-width: 768px) {
+    .no-result__subtitle {
+        max-width: 356px;
+    }
+}

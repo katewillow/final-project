@@ -1,0 +1,29 @@
+@import "__image/news-item__image.css";
+@import "__date/news-item__date.css";
+@import "__title/news-item__title.css";
+@import "__lead/news-item__lead.css";
+@import "__link/news-item__link.css";
+
+.news-item {
+    background: #FFFFFF;
+    border-radius: 8px;
+    text-align: left;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+@media (min-width: 1280px) {
+    .news-item {
+        padding-bottom: 24px;
+    }
+}
+
+
+
+
+

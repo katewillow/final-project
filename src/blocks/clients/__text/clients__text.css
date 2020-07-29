@@ -1,0 +1,12 @@
+.clients__text {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+@media (min-width: 1280px) {
+    .clients__text {
+        width: 70%;
+    }
+}

@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+    .footer__item {
+        margin-right: 25px;
+    }
+    .footer__item:last-child {
+         margin-right: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .footer__item {
+        margin-right: 40px;
+    }
+}
