@@ -14,6 +14,10 @@
     outline: none;
 }
 
+.search__input:focus {
+    box-shadow: 0 0 0 1px lightskyblue;
+}
+
 .search__input::placeholder {
     color: #B6BCBF;
 }

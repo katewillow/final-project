@@ -1,0 +1,23 @@
+.header__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 288px;
+    margin: auto;
+    padding: 16px 16px 0 16px;
+}
+
+@media (min-width: 768px) {
+    .header__content {
+        max-width: 688px;
+        padding: 22px 40px 0 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header__content {
+        max-width: 1232px;
+        padding: 30px 102px 0 102px;
+    }
+}

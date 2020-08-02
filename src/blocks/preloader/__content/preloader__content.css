@@ -1,0 +1,17 @@
+.preloader__content {
+    margin: auto;
+    padding: 80px 0;
+    max-width: 288px;
+}
+
+@media (min-width: 768px) {
+    .preloader__content {
+        max-width: 688px;
+    }
+}
+
+@media (min-width: 1232px) {
+    .preloader__content {
+        max-width: 688px;
+    }
+}

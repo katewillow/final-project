@@ -6,5 +6,6 @@
 @import "../blocks/tech/tech.css";
 @import "../blocks/tech__item/tech__item.css";
 @import "../blocks/author/author.css";
+@import "../blocks/github/github.css";
+@import "../blocks/github-item/github-item.css";
 @import "../blocks/footer/footer.css";
-

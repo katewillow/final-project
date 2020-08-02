@@ -1,0 +1,19 @@
+.search__content {
+    max-width: 288px;
+    margin: auto;
+    padding: 30px 16px 32px 16px;
+}
+
+@media (min-width: 768px) {
+    .search__content {
+        max-width: 448px;
+        padding: 40px 0 48px 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .search__content {
+        max-width: 608px;
+        padding: 80px 0;
+    }
+}

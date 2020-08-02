@@ -1,0 +1,16 @@
+.author__avatar {
+    margin: 0;
+    padding: 0 8px 0 8px;
+}
+
+@media (min-width: 768px) {
+    .author__avatar {
+        padding: 21px 0 13px 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .author__avatar {
+        padding: 0;
+    }
+}

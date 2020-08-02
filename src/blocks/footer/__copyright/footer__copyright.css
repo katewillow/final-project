@@ -7,9 +7,16 @@
     margin: 0;
 }
 
+.footer__copyright_top {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .footer__copyright {
-        order: -1;
+        display: none;
+    }
+    .footer__copyright_top {
+        display: block;
     }
 }
 

@@ -1,0 +1,13 @@
+.statistics-table__bar {
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    background: #2F71E5;
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding-left: 6px;
+}

@@ -1,0 +1,28 @@
+.statistics-table__cell {
+    height: 24px;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1A1B22;
+    padding-bottom: 24px;
+}
+
+.statistics-table__cell_first {
+    padding-top: 8px;
+}
+
+.statistics-table__cell_last{
+    padding-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+    .statistics-table__cell {
+        padding-bottom: 56px;
+    }
+    .statistics-table__cell_last {
+        padding-bottom: 16px;
+    }
+}
+
+
+

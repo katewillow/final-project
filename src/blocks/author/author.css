@@ -1,10 +1,13 @@
+@import "__avatar/author__avatar.css";
 @import "__photo/author__photo.css";
 @import "__description/author__description.css";
 @import "__name/author__name.css";
 @import "__experience/author__experience.css";
 
 .author {
-    padding: 0 16px 32px 16px;
+    max-width: 288px;
+    margin: auto;
+    padding: 32px 16px 32px 16px;
     color: #1A1B22;
     background: #FFFFFF;
     display: flex;
@@ -15,6 +18,7 @@
 
 @media (min-width: 768px) {
     .author {
+        max-width: 688px;
         padding: 40px 40px 48px 40px;
         flex-direction: row;
     }
@@ -22,6 +26,7 @@
 
 @media (min-width: 1280px) {
     .author {
+        max-width: 1232px;
         padding: 80px 104px;
     }
 }

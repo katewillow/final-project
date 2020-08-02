@@ -1,0 +1,10 @@
+.statistics-table__border {
+    box-shadow: inset 0 1px 0 #1A1B22;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .statistics-table__border {
+        padding-bottom: 16px;
+    }
+}

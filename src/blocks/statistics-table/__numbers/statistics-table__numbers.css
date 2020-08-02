@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .statistics-table__numbers {
+        font-family: Roboto, sans-serif;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        width: 25%;
+        text-align: left;
+    }
+}
+

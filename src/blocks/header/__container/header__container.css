@@ -1,5 +1,12 @@
 .header__container {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }
+
+
+
