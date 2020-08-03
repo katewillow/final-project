@@ -26,6 +26,7 @@
         </div>
     </header>
     <section class="statistics">
+        <h2 class="statistics__title-hidden">Статистика</h2>
         <nav class="statistics__nav">
             <ul class="statistics__list">
                 <li class="statistics__item"><a class="statistics__link" href="index.html">Главная</a></li>
@@ -48,10 +49,10 @@
             <table class="statistics-table__results">
                 <tr class="statistics-table__head">
                     <td class="statistics-table__item">дата(август)</td>
-                    <td colspan="5" class="statistics-table__item statistics-table__item_full-width">кол-во упоминаний</td>
+                    <td colspan="4" class="statistics-table__item statistics-table__item_full-width">кол-во упоминаний</td>
                 </tr>
                 <tr class="statistics-table__underline">
-                    <td colspan="6" class="statistics-table__border"></td>
+                    <td colspan="5" class="statistics-table__border"></td>
                 </tr>
                 <tr class="statistics-table__range">
                     <td></td>
@@ -135,7 +136,6 @@
     </footer>
 </div>
 </section>
-<script type="module" src="<%= htmlWebpackPlugin.files.js%>"></script>
-<script type="nomodule" src="<%= htmlWebpackPlugin.files.js%>"></script>
+<script src="<%= htmlWebpackPlugin.files.js%>"></script>
 </body>
 </html>

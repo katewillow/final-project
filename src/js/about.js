@@ -5,7 +5,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 Swiper.use([Navigation, Pagination]);
 
-const mySwiper = new Swiper('.github__content', {
+const mySwiper = new Swiper('.github__carousel-wrapper', {
     pagination: {
         el: '.github__dots-container',
         bulletClass: 'github__dots',

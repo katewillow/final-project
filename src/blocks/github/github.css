@@ -1,6 +1,8 @@
 @import "__content/github__content.css";
 @import "__title/github__title.css";
 @import "__container/github__container.css";
+@import "__linear-gradient/github__linear-gradient.css";
+@import "__carousel-wrapper/github__carousel-wrapper.css";
 @import "__carousel/github__carousel.css";
 @import "__link/github__link.css";
 @import "__link-top/github__link-top.css";

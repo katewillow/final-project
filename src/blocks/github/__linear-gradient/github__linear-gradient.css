@@ -1,0 +1,19 @@
+@media (min-width: 1280px) {
+    .github__linear-gradient {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 104px;
+    }
+
+    .github__linear-gradient_left {
+        left: 0;
+        background: linear-gradient(-90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+        z-index: 1;
+    }
+
+    .github__linear-gradient_right {
+        right: 0;
+        background: linear-gradient(90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+    }
+}
