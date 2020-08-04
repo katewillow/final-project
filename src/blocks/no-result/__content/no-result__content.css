@@ -1,0 +1,19 @@
+.no-result__content {
+    max-width: 288px;
+    padding: 86px 16px 80px 16px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .no-result__content {
+        max-width: 688px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .no-result__content {
+        max-width: 1232px;
+    }
+}

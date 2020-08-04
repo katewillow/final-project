@@ -1,0 +1,18 @@
+.author__description {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .author__description {
+        margin-top: 0;
+        margin-left: 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .author__description {
+        padding-top: 51px;
+        padding-right: 112px;
+        margin-left: 56px;
+    }
+}

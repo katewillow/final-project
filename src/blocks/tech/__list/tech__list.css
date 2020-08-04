@@ -1,0 +1,19 @@
+.tech__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, auto));
+    grid-gap: 42px 32px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .tech__list {
+        grid-template-columns: repeat(4, 120px);
+        grid-gap: 64px 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .tech__list {
+        grid-gap: 0 39px;
+    }
+}

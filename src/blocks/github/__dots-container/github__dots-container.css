@@ -1,0 +1,20 @@
+.github__dots-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+    .github__dots-container {
+        margin-top: 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .github__dots-container {
+        margin-top: 48px;
+    }
+}
+
+

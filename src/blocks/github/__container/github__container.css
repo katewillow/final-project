@@ -1,0 +1,17 @@
+.github__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .github__container {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .github__container {
+        margin-bottom: 64px;
+    }
+}

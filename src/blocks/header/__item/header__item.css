@@ -1,0 +1,13 @@
+.header__item {
+    margin-right: 11px;
+}
+
+@media (min-width: 768px) {
+    .header__item {
+        margin-right: 34px;
+    }
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}

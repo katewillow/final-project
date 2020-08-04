@@ -1,0 +1,17 @@
+.news-item__source-name {
+    color: #B6BCBF;
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 0 16px;
+    margin: 0;
+}
+
+@media (min-width: 1280px) {
+    .news-item__link {
+        padding: 0 24px;
+    }
+}

@@ -1,0 +1,48 @@
+.header__link {
+    text-align: right;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #B6BCBF;
+    text-decoration: none;
+    padding-bottom: 16px;
+}
+
+.header__link_active {
+    color: #FFFFFF;
+    border-bottom: solid;
+    box-sizing: border-box;
+    padding-bottom: 14px;
+}
+
+.header__link_theme-light {
+    color: #1A1B22;
+}
+
+.header__link:hover {
+    opacity: 0.3;
+    transition: 0.3s ease-in;
+}
+
+@media (min-width: 768px) {
+    .header__link {
+        font-size: 18px;
+        line-height: 1.3;
+        padding-bottom: 18px;
+    }
+
+    .header__link_active {
+        padding-bottom: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header__link {
+        padding-bottom: 26px;
+    }
+
+    .header__link_active {
+        padding-bottom: 23px;
+    }
+}

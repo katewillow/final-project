@@ -1,0 +1,90 @@
+/* cyrillic */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/roboto_regular.woff2') format('woff2');
+}
+
+/* latin */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/roboto_regular_latin.woff2') format('woff2');
+}
+
+/* cyrillic */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/roboto_medium.woff2') format('woff2');
+}
+
+/* latin */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/roboto_medium_latin.woff2') format('woff2');
+}
+
+/* cyrillic */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/roboto_bold.woff2') format('woff2');
+}
+
+/* latin */
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/roboto_bold_latin.woff2') format('woff2');
+}
+
+/* cyrillic */
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/roboto_slab_regular.woff') format('woff');
+}
+
+/* latin */
+@font-face {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/roboto_slab__regular_latin.woff') format('woff');
+}
+
+/* cyrillic */
+@font-face {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/source_sans_pro_regular.woff2') format('woff2');
+}
+
+/* latin */
+@font-face {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/source_sans_pro_regular_latin.woff2') format('woff2');
+}
+
+
+

@@ -1,0 +1,12 @@
+@import "__content/search__content.css";
+@import "__title/search__title.css";
+@import "__subtitle/search__subtitle.css";
+@import "__form/search__form.css";
+@import "__input/search__input.css";
+@import "__button/search__button.css";
+
+.search {
+    color: #FFFFFF;
+    font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+}

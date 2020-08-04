@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    .statistics__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+
