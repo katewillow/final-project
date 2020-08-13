@@ -12,7 +12,7 @@ v.0.0.1
 
 
 ### Стэк технологий:
-ES6, Babel, OOP, CSS3, HTML5, Webpack, OOP, BEM
+ES6, Babel, OOP, CSS3, HTML5, Webpack, BEM
 
 ### Пакеты которые используются в сборках:
 *  [Babel CLI](https://babeljs.io/docs/en/babel-cli#docsNav) 

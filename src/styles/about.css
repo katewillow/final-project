@@ -7,5 +7,6 @@
 @import "../blocks/tech__item/tech__item.css";
 @import "../blocks/author/author.css";
 @import "../blocks/github/github.css";
-@import "../blocks/github-item/github-item.css";
+@import "../blocks/commit-card-list/commit-card-list.css";
+@import "../blocks/commit-card/commit-card.css";
 @import "../blocks/footer/footer.css";

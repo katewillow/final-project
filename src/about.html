@@ -57,9 +57,9 @@
                     <img class="tech__image" src="<%=require('./images/tech_css.svg').default%>" alt="Логотип CSS">
                 </div>
                 <div class="tech__item">
-                    <h3 class="tech__name">Java Script</h3>
+                    <h3 class="tech__name">Javascript</h3>
                     <img class="tech__image" src="<%=require('./images/tech_js.svg').default%>"
-                         alt="Логотип Java Script">
+                         alt="Логотип Javascript">
                 </div>
                 <div class="tech__item">
                     <h3 class="tech__name">Webpack</h3>
@@ -91,84 +91,32 @@
         <div class="github__content">
             <div class="github__container">
                 <h2 class="github__title">История коммитов из&nbsp;GitHub</h2>
-                <a class="github__link-top" href="https://github.com/katewillow" target="_blank">Открыть в GitHub</a>
+                <a class="github__link-top" href="https://github.com/katewillow/final-project/commits" target="_blank">Открыть в GitHub</a>
             </div>
             <div class="github__linear-gradient github__linear-gradient_left"></div>
             <div class="github__carousel-wrapper">
                 <button type="button" class="github__button github__button_arrow-left" name="button"></button>
                 <button type="button" class="github__button github__button_arrow-right" name="button"></button>
-                <div class="github__carousel">
-                    <a class="github-item" href="https://github.com/katewillow" target="_blank">
-                        <p class="github-item__date">14 августа, 2019</p>
-                        <div class="github-item__container">
-                            <img class="github-item__avatar" src="<%=require('./images/gh_avatar.png').default%>"
-                                 alt="Аватар пользователя">
-                            <div class="github-item__info">
-                                <p class="github-item__name">Антон Долинин</p>
-                                <p class="github-item__email">anton@yandex.ru</p>
+                <div class="commit-card-list">
+                    <template class="commit-card-template">
+                    <a class="commit-card" href="" target="_blank">
+                        <p class="commit-card__date"></p>
+                        <div class="commit-card__container">
+                            <img class="commit-card__avatar" src="" alt="Аватар пользователя">
+                            <div class="commit-card__info">
+                                <p class="commit-card__name"></p>
+                                <p class="commit-card__email"></p>
                             </div>
                         </div>
-                        <p class="github-item__commit">Emmet (formerly Zen Coding) is a web- developer’s toolkit that
-                            can greatly improve your HTML & CSS workflow.</p>
+                        <p class="commit-card__commit"></p>
                     </a>
-                    <a class="github-item" href="https://github.com/katewillow" target="_blank">
-                        <p class="github-item__date">14 августа, 2019</p>
-                        <div class="github-item__container">
-                            <img class="github-item__avatar" src="<%=require('./images/gh_avatar.png').default%>"
-                                 alt="Аватар пользователя">
-                            <div class="github-item__info">
-                                <p class="github-item__name">Антон Долинин</p>
-                                <p class="github-item__email">anton@yandex.ru</p>
-                            </div>
-                        </div>
-                        <p class="github-item__commit">Emmet (formerly Zen Coding) is a web- developer’s toolkit that
-                            can greatly improve your HTML & CSS workflow.</p>
-                    </a>
-                    <a class="github-item" href="https://github.com/katewillow" target="_blank">
-                        <p class="github-item__date">14 августа, 2019</p>
-                        <div class="github-item__container">
-                            <img class="github-item__avatar" src="<%=require('./images/gh_avatar.png').default%>"
-                                 alt="Аватар пользователя">
-                            <div class="github-item__info">
-                                <p class="github-item__name">Антон Долинин</p>
-                                <p class="github-item__email">anton@yandex.ru</p>
-                            </div>
-                        </div>
-                        <p class="github-item__commit">Emmet (formerly Zen Coding) is a web- developer’s toolkit that
-                            can greatly improve your HTML & CSS workflow.</p>
-                    </a>
-                    <a class="github-item" href="https://github.com/katewillow" target="_blank">
-                        <p class="github-item__date">14 августа, 2019</p>
-                        <div class="github-item__container">
-                            <img class="github-item__avatar" src="<%=require('./images/gh_avatar.png').default%>"
-                                 alt="Аватар пользователя">
-                            <div class="github-item__info">
-                                <p class="github-item__name">Антон Долинин</p>
-                                <p class="github-item__email">anton@yandex.ru</p>
-                            </div>
-                        </div>
-                        <p class="github-item__commit">With Emmet, you can type CSS-like expressions that can be
-                            dynamically parsed, and produce output depending on what you type in the abb...</p>
-                    </a>
-                    <a class="github-item" href="https://github.com/katewillow" target="_blank">
-                        <p class="github-item__date">14 августа, 2019</p>
-                        <div class="github-item__container">
-                            <img class="github-item__avatar" src="<%=require('./images/gh_avatar.png').default%>"
-                                 alt="Аватар пользователя">
-                            <div class="github-item__info">
-                                <p class="github-item__name">Антон Долинин</p>
-                                <p class="github-item__email">anton@yandex.ru</p>
-                            </div>
-                        </div>
-                        <p class="github-item__commit">Emmet (formerly Zen Coding) is a web- developer’s toolkit that
-                            can greatly improve your HTML & CSS workflow.</p>
-                    </a>
+                    </template>
                 </div>
             </div>
             <div class="github__linear-gradient github__linear-gradient_right"></div>
             <div class="github__dots-container">
             </div>
-            <a class="github__link" href="https://github.com/katewillow" target="_blank">Открыть в GitHub</a>
+            <a class="github__link" href="https://github.com/katewillow/final-project/commits" target="_blank">Открыть в GitHub</a>
         </div>
     </section>
     <footer class="footer">

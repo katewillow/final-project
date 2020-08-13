@@ -1,0 +1,11 @@
+.commit-card__container {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0 16px 0;
+}
+
+@media (min-width: 768px) {
+    .commit-card__container {
+        margin-top: 16px;
+    }
+}

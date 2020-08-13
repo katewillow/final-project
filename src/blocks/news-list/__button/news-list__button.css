@@ -1,3 +1,7 @@
+.news-list__button_hidden {
+    display: none;
+}
+
 .news-list__button {
     background: #FFFFFF;
     border-radius: 80px;
@@ -15,8 +19,9 @@
 }
 
 .news-list__button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     transition: 0.3s ease-in;
+    box-shadow: 0 0 15px #000;
 }
 
 @media (min-width: 768px) {
