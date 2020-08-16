@@ -1,14 +1,14 @@
+"use strict";
 import '../styles/about.css';
 import 'swiper/swiper-bundle.css';
-
 import {CommitCard} from "./components/CommitCard";
 import {CommitCardList} from "./components/CommitCardList";
 import {GithubApi} from "./modules/GithubApi";
 import Swiper, { Navigation, Pagination } from 'swiper';
+import {GITHUB_PAGE_SIZE} from "./constants/constants";
 
 (async function () {
     Swiper.use([Navigation, Pagination]);
-
     const mySwiper = new Swiper('.github__carousel-wrapper', {
         pagination: {
             el: '.github__dots-container',
@@ -53,7 +53,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
     try {
         const serverCommits = await api.getCommits();
-        commitList.render(serverCommits.slice(0,20).map(card => new CommitCard(card, commitCardTemplate)));
+        commitList.render(serverCommits.slice(0,GITHUB_PAGE_SIZE).map(card => new CommitCard(card, commitCardTemplate)));
         mySwiper.update();
     } catch (error) {
         console.error("Не удалось загрузить данные: ", error);

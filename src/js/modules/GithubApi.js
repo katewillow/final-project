@@ -1,4 +1,6 @@
 "use strict";
+import {GITHUB_ID} from "../constants/constants";
+import {GITHUB_REPOSITORY} from "../constants/constants";
 
 export class GithubApi {
     constructor(options) {
@@ -14,7 +16,7 @@ export class GithubApi {
 
     async getCommits() {
         const response = await fetch(
-            `${this.options.baseUrl}/katewillow/final-project/commits`);
+            `${this.options.baseUrl}/${GITHUB_ID}/${GITHUB_REPOSITORY}/commits`);
         return this._getResponseData(response);
     }
 }

@@ -1,0 +1,11 @@
+.statistics__table-range {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .statistics__table-range {
+        display: table-row;
+        color: #B6BCBF;
+        width: 100%;
+    }
+}

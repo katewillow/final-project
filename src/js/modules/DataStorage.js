@@ -1,20 +1,17 @@
 "use strict";
 
 export class DataStorage {
-    constructor(array) {
-        this.array = array;
+
+    setDataStorage(array, key) {
+        return localStorage.setItem(key, JSON.stringify(array));
     }
 
-    setDataStorage() {
-        localStorage.setItem(this.array.join(), value);
-    }
-
-    getDataStorage() {
-        localStorage.getItem(this.array.slice(0, 2));
+    getDataStorage(key) {
+        return JSON.parse(localStorage.getItem(key));
     }
 
     clearDataStorage() {
-        localStorage.clear();
+        return localStorage.clear();
     }
 
 }

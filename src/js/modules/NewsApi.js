@@ -1,6 +1,10 @@
 "use strict";
 import {getCurrentDate} from "../utils/date";
 import {getDateWeekAgo} from "../utils/date";
+import {NEWS_API_KEY} from "../constants/constants";
+import {NEWS_PAGE_SIZE} from "../constants/constants";
+import {NEWS_LANGUAGE} from "../constants/constants";
+import {NEWS_SORT_BY} from "../constants/constants";
 
 export class NewsApi {
     constructor(options) {
@@ -16,8 +20,7 @@ export class NewsApi {
 
     async getNews(query) {
         const response = await fetch(
-            `${this.options.baseUrl}/everything?q=${query}&from=${getDateWeekAgo()}&to=${getCurrentDate()}&sortBy=popularity&pageSize=100&language=ru`,
-            {headers: this.options.headers});
+            `${this.options.baseUrl}/everything?q=${query}&apiKey=${NEWS_API_KEY}&from=${getDateWeekAgo()}&to=${getCurrentDate()}&sortBy=${NEWS_SORT_BY}&pageSize=${NEWS_PAGE_SIZE}&language=${NEWS_LANGUAGE}`);
         return this._getResponseData(response);
     }
 }

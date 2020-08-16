@@ -1,0 +1,19 @@
+.statistics__table {
+    padding: 24px 16px 32px 16px;
+    margin: auto;
+    max-width: 288px;
+}
+
+@media (min-width: 768px) {
+    .statistics__table {
+        padding: 40px;
+        max-width: 688px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .statistics__table {
+        padding: 80px 104px;
+        max-width: 1232px;
+    }
+}

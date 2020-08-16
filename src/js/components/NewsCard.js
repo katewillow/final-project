@@ -1,5 +1,5 @@
 "use strict";
-import {getItemDate} from "../utils/date";
+import {getCardDate} from "../utils/date";
 
 export class NewsCard {
     constructor(card, template) {
@@ -17,7 +17,7 @@ export class NewsCard {
         } else {
             image.src = './images/no-result__image.svg';
         }
-        cardTemplate.querySelector('.news-card__date').textContent = getItemDate(this.card.publishedAt);
+        cardTemplate.querySelector('.news-card__date').textContent = getCardDate(this.card.publishedAt);
         cardTemplate.querySelector('.news-card__title').textContent = this.card.title;
         cardTemplate.querySelector('.news-card__lead').textContent = this.card.description;
         cardTemplate.querySelector('.news-card__source-name').textContent = this.card.source.name;

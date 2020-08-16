@@ -6,8 +6,8 @@
 @import "../blocks/search/search.css";
 @import "../blocks/search-input/search-input.css";
 @import "../blocks/preloader/preloader.css";
-@import "../blocks/no-result/no-result.css";
-@import "../blocks/news-list/news-list.css";
+@import "../blocks/server-errors/server-errors.css";
+@import "../blocks/news/news.css";
 @import "../blocks/news-card-list/news-card-list.css";
 @import "../blocks/news-card/news-card.css";
 @import "../blocks/author/author.css";

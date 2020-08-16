@@ -50,28 +50,19 @@
             <h2 class="preloader__text">Идет поиск новостей...</h2>
         </div>
     </section>
-    <section class="no-result no-result_hidden">
-        <div class="no-result__content">
-            <img class="no-result__image" src="<%=require('./images/no-result__image.svg').default%>"
+    <section class="server-errors server-errors_hidden">
+        <div class="server-errors__content">
+            <img class="server-errors__image" src="<%=require('./images/no-result__image.svg').default%>"
                  alt="Ничего не найдено.Иллюстрация">
-            <h2 class="no-result__title">Ничего не найдено</h2>
-            <p class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</p>
+            <h2 class="server-errors__title"></h2>
+            <p class="server-errors__subtitle"></p>
         </div>
     </section>
-    <template class="error-template">
-        <div class="no-result__content">
-            <img class="no-result__image" src="<%=require('./images/no-result__image.svg').default%>"
-                 alt="Ничего не найдено.Иллюстрация">
-            <h2 class="no-result__title">Во время запроса произошла ошибка.</h2>
-            <p class="no-result__subtitle">Возможно, проблема с соединением или сервер недоступен.
-                Подождите немного и попробуйте ещё раз.</p>
-        </div>
-    </template>
-    <section class="news-list news-list_hidden">
-        <div class="news-list__content">
-            <div class="news-list__header">
-                <h2 class="news-list__title">Результаты поиска</h2>
-                <a class="news-list__link" href="analytics.html">Посмотреть аналитику</a>
+    <section class="news news_hidden">
+        <div class="news__content">
+            <div class="news__header">
+                <h2 class="news__title">Результаты поиска</h2>
+                <a class="news__link" href="analytics.html">Посмотреть аналитику</a>
             </div>
             <div class="news-card-list">
                 <template class="news-card-template">
@@ -84,7 +75,7 @@
                     </a>
                 </template>
             </div>
-            <button type="button" class="news-list__button news-list__button_hidden" name="button">Показать еще</button>
+            <button type="button" class="news__button news__button_hidden" name="button">Показать еще</button>
         </div>
     </section>
     <section class="author">
@@ -98,11 +89,11 @@
         </picture>
         <div class="author__description">
             <h2 class="author__name">Об авторе</h2>
-            <p class="author__experience">Это блок с&nbsp;описанием автора проекта.
-                Здесь следует указать, как вас зовут, чем вы&nbsp;занимаетесь, какими технологиями
-                разработки владеете.</p>
-            <p class="author__experience">Также можно рассказать о&nbsp;процессе обучения в&nbsp;Практикуме,
-                чему вы&nbsp;тут научились, и&nbsp;чем можете помочь потенциальным заказчикам.</p>
+            <p class="author__experience">Меня зовут Екатерина Суркова и&nbsp;я&nbsp;начинающий frontend-разработчик.
+                За&nbsp;семь месяцев обучения в&nbsp;Яндекс.Практикум я&nbsp;овладела HTML5 и&nbsp;CSS3, а&nbsp;также
+                Javascript. Познакомилась с&nbsp;методологиями БЭМ и&nbsp;ООП. Умею собирать проекты с&nbsp;помощью
+                Webpack и&nbsp;работать с&nbsp;Git.</p>
+            <p class="author__experience">Для сотрудничества пишите на&nbsp;почту katyawillow@yandex.ru.</p>
         </div>
     </section>
     <footer class="footer">

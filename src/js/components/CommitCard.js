@@ -1,6 +1,5 @@
 "use strict";
-
-import {getItemDate} from "../utils/date";
+import {getCardDate} from "../utils/date";
 
 export class CommitCard {
     constructor(card, template) {
@@ -14,7 +13,7 @@ export class CommitCard {
         link.href = this.card.html_url;
         const image = commitTemplate.querySelector('.commit-card__avatar');
         image.src = this.card.author.avatar_url;
-        commitTemplate.querySelector('.commit-card__date').textContent = getItemDate(this.card.commit.committer.date);
+        commitTemplate.querySelector('.commit-card__date').textContent = getCardDate(this.card.commit.committer.date);
         commitTemplate.querySelector('.commit-card__name').textContent = this.card.commit.committer.name;
         commitTemplate.querySelector('.commit-card__email').textContent = this.card.commit.committer.email;
         commitTemplate.querySelector('.commit-card__commit').textContent = this.card.commit.message;
