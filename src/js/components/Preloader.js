@@ -1,7 +1,7 @@
+"use strict";
+
 export class Preloader {
-    /**
-     * @param {Element} element
-     */
+
     constructor(element) {
         this.element = element;
     }

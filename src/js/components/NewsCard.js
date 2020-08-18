@@ -7,15 +7,15 @@ export class NewsCard {
         this.card = card;
     }
 
-    create () {
+    create() {
         const cardTemplate = this.template.cloneNode(true);
         const link = cardTemplate.querySelector('.news-card');
         link.href = this.card.url;
         const image = cardTemplate.querySelector('.news-card__image');
-        if (image.src = this.card.urlToImage) {
-            image.hidden=false;
-        } else {
+        if (this.card.urlToImage === null) {
             image.src = './images/no-result__image.svg';
+        } else {
+            image.src = this.card.urlToImage;
         }
         cardTemplate.querySelector('.news-card__date').textContent = getCardDate(this.card.publishedAt);
         cardTemplate.querySelector('.news-card__title').textContent = this.card.title;

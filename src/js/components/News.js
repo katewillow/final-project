@@ -1,8 +1,17 @@
 "use strict";
+import {NewsCard} from "./NewsCard";
 
 export class News {
-    constructor(element) {
+    constructor(element, button, newsStorage, newsList, template) {
         this.element = element;
+        this.button = button;
+        this.newsStorage = newsStorage;
+        this.newsList = newsList;
+        this.template = template;
+
+        this.button.addEventListener('click', () => {
+            this.render();
+        });
     }
 
     show() {
@@ -13,14 +22,13 @@ export class News {
         this.element.classList.add('news_hidden');
     }
 
-    addMoreCards(array, button) {
-        if (array.length <= 3) {
-            button.classList.add('news__button_hidden');
+    render() {
+        this.newsList.render(this.newsStorage.getNextCards(3).map(card => new NewsCard(card, this.template)));
+        if (this.newsStorage.hasMoreCards()) {
+            this.button.classList.remove('news__button_hidden');
         } else {
-            button.classList.remove('news__button_hidden');
-            button.addEventListener('click', () => {
-
-            });
+            this.button.classList.add('news__button_hidden');
         }
     }
+
 }

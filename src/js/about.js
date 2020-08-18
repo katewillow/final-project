@@ -46,8 +46,8 @@ import {GITHUB_PAGE_SIZE} from "./constants/constants";
     const commitCardTemplate = document.querySelector('.commit-card-template').content;
     const commitList = new CommitCardList(commits);
 
-    const serverUrl = process.env.NODE_ENV === 'development' ? 'http://api.github.com/repos' : 'https://api.github.com/repos',
-        api = new GithubApi({
+    const serverUrl = process.env.NODE_ENV === 'development' ? 'http://api.github.com/repos' : 'https://api.github.com/repos';
+        const api = new GithubApi({
             baseUrl: serverUrl,
         });
 

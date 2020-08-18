@@ -10,8 +10,4 @@ export class DataStorage {
         return JSON.parse(localStorage.getItem(key));
     }
 
-    clearDataStorage() {
-        return localStorage.clear();
-    }
-
 }

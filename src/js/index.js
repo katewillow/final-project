@@ -1,13 +1,13 @@
 "use strict";
 import '../styles/index.css';
 import {DataStorage} from "./modules/DataStorage";
-import {NewsCard} from "./components/NewsCard";
 import {NewsCardList} from "./components/NewsCardList";
 import {SearchInput} from "./components/SearchInput";
 import {NewsApi} from "./modules/NewsApi";
 import {Preloader} from "./components/Preloader";
 import {News} from "./components/News";
 import {ServerErrors} from "./components/ServerErrors";
+import {NewsStorage} from "./modules/NewsStorage";
 
 (async function () {
     const searchForm = document.querySelector('.search-input__form');
@@ -16,26 +16,23 @@ import {ServerErrors} from "./components/ServerErrors";
     const showMoreButton = document.querySelector('.news__button');
 
     const preloader = new Preloader(document.querySelector('.preloader'));
-    const newsSection = new News(document.querySelector('.news'));
     const newsCardList = new NewsCardList(document.querySelector('.news-card-list'));
     const serverErrors = new ServerErrors();
     const dataStorage = new DataStorage();
+    const newsStorage = new NewsStorage(dataStorage);
+    const newsSection = new News(document.querySelector('.news'), showMoreButton, newsStorage, newsCardList, newsCardTemplate);
+    const serverUrl = process.env.NODE_ENV === 'development' ? 'https://nomoreparties.co/news/v2/' : 'https://nomoreparties.co/news/v2/';
+        const api = new NewsApi({
+            baseUrl: serverUrl,
+        });
 
     const validationForm = new SearchInput(searchForm, async (query) => {
         preloader.show();
-        validationForm.setSubmitButtonState();
-
-        const serverUrl = process.env.NODE_ENV === 'development' ? 'http://nomoreparties.co/news/v2/' : 'https://nomoreparties.co/news/v2/',
-            api = new NewsApi({
-                baseUrl: serverUrl,
-            });
 
         try {
             const serverNews = await api.getNews(query);
-            console.log(serverNews);
             dataStorage.setDataStorage(serverNews.articles, 'news');
-            newsCardList.render(dataStorage.getDataStorage('news').slice(0, 3).map(card => new NewsCard(card, newsCardTemplate)));
-            newsSection.addMoreCards(dataStorage.getDataStorage('news'), showMoreButton);
+            newsSection.render();
             newsSection.show();
 
             if (serverNews.articles.length === 0) {

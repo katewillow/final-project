@@ -4,5 +4,11 @@
 "use strict";
 
 export class Statistics {
+    constructor() {
+
+    }
+
+
+
 
 }
