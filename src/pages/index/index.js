@@ -1,15 +1,16 @@
 "use strict";
-import '../styles/index.css';
-import {DataStorage} from "./modules/DataStorage";
-import {NewsCardList} from "./components/NewsCardList";
-import {SearchInput} from "./components/SearchInput";
-import {NewsApi} from "./modules/NewsApi";
-import {Preloader} from "./components/Preloader";
-import {News} from "./components/News";
-import {ServerErrors} from "./components/ServerErrors";
-import {NewsStorage} from "./modules/NewsStorage";
+import './index.css';
+import {DataStorage} from "../../js/modules/DataStorage";
+import {NewsCardList} from "../../blocks/news-card-list/NewsCardList";
+import {SearchInput} from "../../blocks/search-input/SearchInput";
+import {NewsApi} from "../../js/modules/NewsApi";
+import {Preloader} from "../../blocks/preloader/Preloader";
+import {News} from "../../blocks/news/News";
+import {ServerErrors} from "../../blocks/server-errors/ServerErrors";
+import {NewsStorage} from "../../js/modules/NewsStorage";
 
 (async function () {
+
     const searchForm = document.querySelector('.search-input__form');
     const newsCardTemplate = document.querySelector('.news-card-template').content;
     const serverError = document.querySelector('.server-errors');
@@ -21,17 +22,28 @@ import {NewsStorage} from "./modules/NewsStorage";
     const dataStorage = new DataStorage();
     const newsStorage = new NewsStorage(dataStorage);
     const newsSection = new News(document.querySelector('.news'), showMoreButton, newsStorage, newsCardList, newsCardTemplate);
-    const serverUrl = process.env.NODE_ENV === 'development' ? 'https://nomoreparties.co/news/v2/' : 'https://nomoreparties.co/news/v2/';
+    const serverUrl = process.env.NODE_ENV === 'development' ? 'http://nomoreparties.co/news/v2/' : 'https://nomoreparties.co/news/v2/';
         const api = new NewsApi({
             baseUrl: serverUrl,
         });
 
+    if (newsStorage.hasCards()) {
+        newsSection.render();
+        newsSection.show();
+    }
+
     const validationForm = new SearchInput(searchForm, async (query) => {
         preloader.show();
+        serverErrors.hide(serverError);
 
         try {
+
             const serverNews = await api.getNews(query);
-            dataStorage.setDataStorage(serverNews.articles, 'news');
+            newsStorage.setCards(serverNews.articles);
+            dataStorage.setDataStorage(query, 'query');
+            dataStorage.setDataStorage(serverNews.totalResults, 'totalResults');
+
+            newsSection.clear();
             newsSection.render();
             newsSection.show();
 
@@ -39,15 +51,20 @@ import {NewsStorage} from "./modules/NewsStorage";
                 serverErrors.showNoResult(serverError);
                 newsSection.hide();
             }
+
             preloader.hide();
+
         } catch (error) {
             console.error("Не удалось загрузить данные: ", error);
             serverErrors.showNoNetwork(serverError);
             preloader.hide();
         }
-
     });
 
     validationForm.setEventListeners(searchForm);
+
+    if (newsStorage.hasCards()) {
+        validationForm.hasInput(dataStorage.getDataStorage('query'));
+    }
 
 })();

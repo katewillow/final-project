@@ -1,5 +1,6 @@
 "use strict";
-import {getCardDate} from "../utils/date";
+
+import {getCardDate} from "../../js/utils/date";
 
 export class CommitCard {
     constructor(card, template) {

@@ -1,10 +1,9 @@
 function getApiDate(date) {
     const day = date.getDate();
     const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
-    return [date.getFullYear(),
-        (month > 9 ? '' : '0') + month,
-        (day > 9 ? '' : '0') + day].join('-');
+    return [year, (month > 9 ? '' : '0') + month, (day > 9 ? '' : '0') + day].join('-');
 }
 
 export function getCurrentDate() {

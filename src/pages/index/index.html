@@ -7,10 +7,10 @@
     <title>NewsAnalyzer</title>
     <meta name="description" content="Cервис для анализа происходящих в мире событий">
     <meta name="author" content="Екатерина Суркова">
-    <link rel="shortcut icon" type="image/x-icon" href="<%=require('./images/favicon.ico').default%>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon-16x16.png').default%>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon-32x32.png').default%>">
-    <link rel="icon" type="image/png" sizes="96x96" href="<%=require('./images/favicon-96x96.png').default%>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=require('../../images/favicon.ico').default%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('../../images/favicon-16x16.png').default%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon-32x32.png').default%>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon-96x96.png').default%>">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
 </head>
 <body>
@@ -21,10 +21,8 @@
                 <a class="header__title" href="index.html">NewsAnalyzer</a>
                 <nav class="header__nav">
                     <ul class="header__container">
-                        <li class="header__item"><a class="header__link header__link_active"
-                                                    href="index.html">Главная</a></li>
-                        <li class="header__item"><a class="header__link" href="about.html">О
-                            проекте</a></li>
+                        <li class="header__item"><a class="header__link header__link_active" href="index.html">Главная</a></li>
+                        <li class="header__item"><a class="header__link" href="about.html">О проекте</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,7 +50,7 @@
     </section>
     <section class="server-errors server-errors_hidden">
         <div class="server-errors__content">
-            <img class="server-errors__image" src="<%=require('./images/no-result__image.svg').default%>"
+            <img class="server-errors__image" src="<%=require('../../images/no-result__image.svg').default%>"
                  alt="Ничего не найдено.Иллюстрация">
             <h2 class="server-errors__title"></h2>
             <p class="server-errors__subtitle"></p>
@@ -80,11 +78,11 @@
     </section>
     <section class="author">
         <picture class="author__avatar">
-            <source class="author__photo" srcset="<%=require('./images/avatar-272x272.png').default%>"
+            <source class="author__photo" srcset="<%=require('../../images/avatar-272x272.png').default%>"
                     media="(max-width: 767px)">
-            <source class="author__photo" srcset="<%=require('./images/avatar-232x232.png').default%>"
+            <source class="author__photo" srcset="<%=require('../../images/avatar-232x232.png').default%>"
                     media="(max-width: 1279px)">
-            <img class="author__photo" src="<%=require('./images/avatar-464x464.png').default%>"
+            <img class="author__photo" src="<%=require('../../images/avatar-464x464.png').default%>"
                  alt="Фотография автора проекта">
         </picture>
         <div class="author__description">

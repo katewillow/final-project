@@ -4,11 +4,9 @@
 "use strict";
 
 export class Statistics {
-    constructor() {
-
+    constructor(dataStorage) {
+        this.dataStorage = dataStorage;
     }
-
-
 
 
 }

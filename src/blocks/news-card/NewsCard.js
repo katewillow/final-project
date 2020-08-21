@@ -1,5 +1,5 @@
 "use strict";
-import {getCardDate} from "../utils/date";
+import {getCardDate} from "../../js/utils/date";
 
 export class NewsCard {
     constructor(card, template) {

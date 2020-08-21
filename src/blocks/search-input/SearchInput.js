@@ -5,22 +5,22 @@ export class SearchInput {
     constructor(form, onSubmit) {
         this.form = form;
         this.onSubmit = onSubmit;
+        this.input = this.form.querySelector('.search-input__input');
+        this.button = this.form.querySelector('.search-input__button');
     }
 
     _checkInputValidity() {
         const error = this.form.querySelector('.search-input__error');
-        const input = this.form.querySelector('.search-input__input');
+        const isValid = this.input.checkValidity();
 
-        const isValid = input.checkValidity();
-
-        if (input.validity.valueMissing) {
+        if (this.input.validity.valueMissing) {
             error.innerText = "Нужно ввести ключевое слово";
         } else {
             error.innerText = "";
         }
 
         if (isValid) {
-            this.onSubmit(input.value);
+            this.onSubmit(this.input.value);
         }
     }
 
@@ -28,15 +28,15 @@ export class SearchInput {
         this._checkInputValidity();
     }
 
-    /*setSubmitButtonState() {
-        const submitButton = this.form.querySelector('.search-input__button');
-        submitButton.disabled = ;
-    }*/
+    hasInput(string) {
+      this.input.value = string;
+    }
 
     setEventListeners() {
         this.form.addEventListener('submit', (event) => {
             event.preventDefault();
             this._checkFormValidity();
         });
+
     }
 }

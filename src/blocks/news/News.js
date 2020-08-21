@@ -1,5 +1,5 @@
 "use strict";
-import {NewsCard} from "./NewsCard";
+import {NewsCard} from "../news-card/NewsCard";
 
 export class News {
     constructor(element, button, newsStorage, newsList, template) {
@@ -20,6 +20,10 @@ export class News {
 
     hide() {
         this.element.classList.add('news_hidden');
+    }
+
+    clear() {
+        this.newsList.clear();
     }
 
     render() {

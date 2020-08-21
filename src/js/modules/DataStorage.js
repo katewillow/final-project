@@ -2,8 +2,8 @@
 
 export class DataStorage {
 
-    setDataStorage(array, key) {
-        return localStorage.setItem(key, JSON.stringify(array));
+    setDataStorage(value, key) {
+        return localStorage.setItem(key, JSON.stringify(value));
     }
 
     getDataStorage(key) {

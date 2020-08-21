@@ -1,11 +1,11 @@
 "use strict";
-import '../styles/about.css';
+import './about.css';
 import 'swiper/swiper-bundle.css';
-import {CommitCard} from "./components/CommitCard";
-import {CommitCardList} from "./components/CommitCardList";
-import {GithubApi} from "./modules/GithubApi";
+import {CommitCard} from "../../blocks/commit-card/CommitCard";
+import {CommitCardList} from "../../blocks/commit-card-list/CommitCardList";
+import {GithubApi} from "../../js/modules/GithubApi";
 import Swiper, { Navigation, Pagination } from 'swiper';
-import {GITHUB_PAGE_SIZE} from "./constants/constants";
+import {GITHUB_PAGE_SIZE} from "../../js/constants/constants";
 
 (async function () {
     Swiper.use([Navigation, Pagination]);

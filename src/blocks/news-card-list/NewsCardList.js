@@ -15,4 +15,10 @@ export class NewsCardList {
             this.addCard(card);
         });
     }
+
+    clear() {
+        while (this.news.firstChild) {
+            this.news.removeChild(this.news.firstChild);
+        }
+    }
 }
