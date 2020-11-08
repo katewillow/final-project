@@ -1,5 +1,6 @@
 "use strict";
 import {NewsCard} from "../news-card/NewsCard";
+import {NEWS_COUNT} from "../../js/constants/constants";
 
 export class News {
     constructor(element, button, newsStorage, newsList, template) {
@@ -27,7 +28,7 @@ export class News {
     }
 
     render() {
-        this.newsList.render(this.newsStorage.getNextCards(3).map(card => new NewsCard(card, this.template)));
+        this.newsList.render(this.newsStorage.getNextCards(NEWS_COUNT).map(card => new NewsCard(card, this.template)));
         if (this.newsStorage.hasMoreCards()) {
             this.button.classList.remove('news__button_hidden');
         } else {

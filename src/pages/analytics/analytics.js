@@ -2,16 +2,19 @@
 
 import './analytics.css';
 import {DataStorage} from "../../js/modules/DataStorage";
-import {NewsStorage} from "../../js/modules/NewsStorage";
 import {Statistics} from "../../blocks/statistics/Statistics";
+import { getCurrentMonth, getGraphDate } from "../../js/utils/date";
 
 (function() {
     const userSearch = document.querySelector('.statistics__user-search');
     const totalResults = document.querySelector('.statistics__amount_all');
     const titleReferences = document.querySelector('.statistics__amount_title');
+    const currentMonth = document.querySelector('.statistics__table-month');
+    const statisticsBody = document.querySelector('.statistics__table-body');
+    const stringTemplate = document.querySelector('.statistics__table-template').content;
 
-    const statistics = new Statistics();
     const dataStorage = new DataStorage();
+    const statistics = new Statistics(dataStorage, stringTemplate);
 
     function getSearchText() {
         userSearch.textContent = dataStorage.getDataStorage('query');
@@ -27,8 +30,18 @@ import {Statistics} from "../../blocks/statistics/Statistics";
         }).length;
     }
 
+    function setCurrentMonth() {
+        currentMonth.textContent = getCurrentMonth();
+    }
+
     getSearchText();
     getTotalResults();
     getTitleReference();
+    setCurrentMonth();
+
+    statistics.renderStatistics().forEach(node => statisticsBody.append(node));
+
+    console.log(statistics.countNewsNumber());
+    console.log(getGraphDate());
 
 })();

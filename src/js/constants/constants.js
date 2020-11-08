@@ -1,4 +1,5 @@
 export const NEWS_PAGE_SIZE = 100;
+export const NEWS_COUNT = 3;
 export const NEWS_LANGUAGE = 'ru';
 export const NEWS_SORT_BY = 'publishedAt';
 export const NEWS_API_KEY = 'b02cc2fdc9754d1abddd93f7ad88fac0';
