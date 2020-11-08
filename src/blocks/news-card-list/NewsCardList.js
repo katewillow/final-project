@@ -6,13 +6,13 @@ export class NewsCardList {
         this.news = news;
     }
 
-    addCard(card) {
-        this.news.appendChild(card.create());
+    _addCard(card) {
+        this.news.appendChild(card.createCard());
     }
 
     render(array) {
         array.forEach(card => {
-            this.addCard(card);
+            this._addCard(card);
         });
     }
 

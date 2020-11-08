@@ -1,10 +1,6 @@
-//Класс, отвечающий за логику работы графиков со статистикой на странице аналитики.
-//Конструктор класса получает объект, содержащий текущее состояние локального браузерного хранилища.
-
 "use strict";
 
 import {getGraphDate, getNDayAgo} from "../../js/utils/date";
-
 
 export class Statistics {
     constructor(dataStorage, template) {
@@ -12,7 +8,7 @@ export class Statistics {
         this.template = template;
     }
 
-    countNewsNumber() {
+    _countNewsNumber() {
         let result = [];
         for (let i = 0; i < 7; i++) {
             result.push(this.dataStorage.getDataStorage('news').filter(news => {
@@ -25,13 +21,14 @@ export class Statistics {
 
     renderStatistics() {
         const dates = getGraphDate();
-        const numbers = this.countNewsNumber();
+        const numbers = this._countNewsNumber();
         const nodes = [];
 
         for (let i = 0; i < dates.length; i++) {
             const node = this.template.cloneNode(true);
             const weekDay = node.querySelector('.statistics__table-cell');
             const dayResult = node.querySelector('.statistics__table-bar');
+            dayResult.style.width = numbers[i] + '%';
             weekDay.textContent = dates[i];
             dayResult.textContent = numbers[i];
             nodes.push(node);

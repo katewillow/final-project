@@ -1,9 +1,9 @@
 "use strict";
 
 import './analytics.css';
-import {DataStorage} from "../../js/modules/DataStorage";
-import {Statistics} from "../../blocks/statistics/Statistics";
-import { getCurrentMonth, getGraphDate } from "../../js/utils/date";
+import { DataStorage } from "../../js/modules/DataStorage";
+import { Statistics } from "../../blocks/statistics/Statistics";
+import { getCurrentMonth } from "../../js/utils/date";
 
 (function() {
     const userSearch = document.querySelector('.statistics__user-search');
@@ -40,8 +40,5 @@ import { getCurrentMonth, getGraphDate } from "../../js/utils/date";
     setCurrentMonth();
 
     statistics.renderStatistics().forEach(node => statisticsBody.append(node));
-
-    console.log(statistics.countNewsNumber());
-    console.log(getGraphDate());
 
 })();

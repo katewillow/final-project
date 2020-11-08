@@ -7,7 +7,7 @@ export class NewsCard {
         this.card = card;
     }
 
-    create() {
+    createCard() {
         const cardTemplate = this.template.cloneNode(true);
         const link = cardTemplate.querySelector('.news-card');
         link.href = this.card.url;

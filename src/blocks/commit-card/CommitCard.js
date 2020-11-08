@@ -8,7 +8,7 @@ export class CommitCard {
         this.card = card;
     }
 
-    create () {
+   create () {
         const commitTemplate = this.template.cloneNode(true);
         const link = commitTemplate.querySelector('.commit-card');
         link.href = this.card.html_url;

@@ -5,7 +5,7 @@ import {CommitCard} from "../../blocks/commit-card/CommitCard";
 import {CommitCardList} from "../../blocks/commit-card-list/CommitCardList";
 import {GithubApi} from "../../js/modules/GithubApi";
 import Swiper, { Navigation, Pagination } from 'swiper';
-import {GITHUB_PAGE_SIZE} from "../../js/constants/constants";
+import { GITHUB_PAGE_SIZE } from "../../js/constants/constants";
 
 (async function () {
     Swiper.use([Navigation, Pagination]);

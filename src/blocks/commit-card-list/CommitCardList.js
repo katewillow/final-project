@@ -5,13 +5,13 @@ export class CommitCardList {
         this.commits = commits;
     }
 
-    addCard(card) {
+    _addCard(card) {
         this.commits.appendChild(card.create());
     }
 
     render(array) {
         array.forEach(card => {
-            this.addCard(card);
+            this._addCard(card);
         });
     }
 }

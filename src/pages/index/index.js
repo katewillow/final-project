@@ -22,7 +22,7 @@ import {NewsStorage} from "../../js/modules/NewsStorage";
     const dataStorage = new DataStorage();
     const newsStorage = new NewsStorage(dataStorage);
     const newsSection = new News(document.querySelector('.news'), showMoreButton, newsStorage, newsCardList, newsCardTemplate);
-    const serverUrl = process.env.NODE_ENV === 'development' ? 'https://nomoreparties.co/news/v2/' : 'http://nomoreparties.co/news/v2/';
+    const serverUrl = process.env.NODE_ENV === 'development' ? 'http://nomoreparties.co/news/v2/' : 'https://nomoreparties.co/news/v2/';
         const api = new NewsApi({
             baseUrl: serverUrl,
         });
