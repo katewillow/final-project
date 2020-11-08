@@ -7,11 +7,12 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: {main: './src/js/index.js', about: './src/js/about.js', analytics: './src/js/analytics.js'},
+    entry: {main: './src/pages/index/index.js', about: './src/pages/about/about.js', analytics: './src/pages/analytics/analytics.js'},
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './js/[name].[chunkhash].js'
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -59,7 +60,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './styles/style.[contenthash].css'
+            filename: './pages/style.[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -71,19 +72,19 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/index.html',
+            template: './src/pages/index/index.html',
             filename: 'index.html',
             chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/about.html',
+            template: './src/pages/about/about.html',
             filename: 'about.html',
             chunks: ['about']
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/analytics.html',
+            template: './src/pages/analytics/analytics.html',
             filename: 'analytics.html',
             chunks: ['analytics']
         }),

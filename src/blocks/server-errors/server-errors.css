@@ -1,0 +1,17 @@
+@import "__content/server-errors__content.css";
+@import "__image/server-errors__image.css";
+@import "__title/server-errors__title.css";
+@import "__subtitle/server-errors__subtitle.css";
+
+.server-errors {
+    background: #F5F6F7;
+    text-align: center;
+    font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.server-errors_hidden {
+    display: none;
+}
+
+

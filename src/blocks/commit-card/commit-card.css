@@ -1,0 +1,40 @@
+@import "__date/commit-card__date.css";
+@import "__avatar/commit-card__avatar.css";
+@import "__container/commit-card__container.css";
+@import "__info/commit-card__info.css";
+@import "__name/commit-card__name.css";
+@import "__email/commit-card__email.css";
+@import "__commit/commit-card__commit.css";
+
+.commit-card {
+    font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    min-height: 264px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.commit-card:hover {
+    box-shadow: 0 0 15px #000;
+    transition: 0.3s ease-in;
+}
+
+@media (min-width: 768px) {
+    .commit-card {
+        padding: 24px;
+        min-height: 242px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .commit-card {
+        min-height: 288px;
+    }
+}

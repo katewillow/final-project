@@ -5,6 +5,13 @@
     line-height: 1.5;
     margin: 0;
     padding-bottom: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.header__title_theme-light {
+    color: #1A1B22;
 }
 
 @media (min-width: 768px) {

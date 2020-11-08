@@ -1,0 +1,12 @@
+@import "../../vendor/fonts.css";
+@import "../../vendor/normalize.css";
+@import "../../blocks/page/page.css";
+@import "../../blocks/header/header.css";
+@import "../../blocks/clients/clients.css";
+@import "../../blocks/tech/tech.css";
+@import "../../blocks/tech__item/tech__item.css";
+@import "../../blocks/author/author.css";
+@import "../../blocks/github/github.css";
+@import "../../blocks/commit-card-list/commit-card-list.css";
+@import "../../blocks/commit-card/commit-card.css";
+@import "../../blocks/footer/footer.css";

@@ -1,3 +1,4 @@
+@import "__content/statistics__content.css";
 @import "__title-hidden/statistics__title-hidden.css";
 @import "__nav/statistics__nav.css";
 @import "__title/statistics__title.css";
@@ -7,27 +8,22 @@
 @import "__list/statistics__list.css";
 @import "__item/statistics__item.css";
 @import "__link/statistics__link.css";
+@import "__content-table/statistics__content-table.css";
+@import "__table/statistics__table.css";
+@import "__table-title/statistics__table-title.css";
+@import "__table-results/statistics__table-results.css";
+@import "__table-head/statistics__table-head.css";
+@import "__table-item/statistics__table-item.css";
+@import "__table-border/statistics__table-border.css";
+@import "__table-range/statistics__table-range.css";
+@import "__table-numbers/statistics__table-numbers.css";
+@import "__table-last-cell-wrapper/statistics__table-last-cell-wrapper.css";
+@import "__table-cell/statistics__table-cell.css";
+@import "__table-bar/statistics__table-bar.css";
 
 .statistics {
-    margin: auto;
-    padding: 16px 16px 24px 16px;
     font-family: Roboto, Roboto Slab, Sourse San Pro, Arial, Helvetica, sans-serif;
     font-style: normal;
-    max-width: 288px;
-}
-
-@media (min-width: 768px) {
-    .statistics {
-        max-width: 688px;
-        padding: 40px 40px 32px 40px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .statistics {
-        max-width: 1232px;
-        padding: 40px 104px 104px 104px;
-        margin: auto;
-    }
+    background: #FFFFFF;
 }
 

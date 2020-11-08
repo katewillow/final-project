@@ -1,0 +1,5 @@
+.statistics__table-last-cell-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
